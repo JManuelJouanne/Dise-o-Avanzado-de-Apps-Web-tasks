@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Antonio Ossa's Editor MD </title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/dark-mode.css">
+        <link rel="stylesheet" href="css/dialog.css">
+    </head>
+ 
+    <body>
+        <header>
+            <div id="toolbar">
+                <button data-md="# ">H1</button>
+                <button data-md="## ">H2</button>
+                <button data-md="**bold**">B</button>
+                <button data-md="_italic_ "><em>I</em></button>
+                <button data-md="- ">Lista</button>
+                <button data-md="1. ">Lista Num</button>
+                <button data-md="[Texto](url) ">🔗 Enlace</button>
+                <button data-md="![Alt](url) ">🖼️ Imagen</button>
+                <button data-md="```code```" >💻 Block Code</button>
+                <button data-md="> ">Blockquote</button>
+                <button data-md="---">HR</button>
+                <button data-md="`code`">💻 Inline Code</button>
+            </div>
+            <div id="dark-mode-div">
+                <button id="export-button">⬇️ PDF</button>
+            </div>
+            <div id="dark-mode-div">
+                <button id="toggle-dark-mode"></button>
+            </div>   
+        </header>
+
+        <main>         
+            <section id="editor-container">
+                <textarea id="markdown-editor"></textarea>
+                <dialog id="slash-dialog" hidden>
+                    <p>slash commands</p>
+                    <hr>
+                    <button id="code-block-button" data-md="```code```">
+                        <h3>Code Block</h3>
+                        <p>Insertar bloque de codigo</p>
+                    </button>
+                    <hr>
+                    <button id="details-button">
+                        <h3>Details Section</h3>
+                        <p>Insertar seccion de detalles desplegables</p>
+                    </button>
+                </dialog>
+            </section>
+            <section id="preview-container">
+                <div id="markdown-preview"></div>
+            </section>
+        </main>
+        <script src="js/dark-mode.js"></script>
+        <script src="js/slash-menu.js"></script>
+        <script src="js/toolbar.js"></script>
+        <script src="js/markdown.js"></script>
+        <script src="js/scroll-sync.js"></script>
+        <script src="js/pdf-export.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    </body>
+ </html>

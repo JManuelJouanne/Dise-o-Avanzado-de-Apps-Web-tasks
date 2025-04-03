@@ -1,22 +1,71 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log
+pnpm-lock.yaml
+package-lock.json
+.yarn-integrity
+.npmrc
+.yarnrc
+.pnpm-debug.log*
+.dsc
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.idea/
 .vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results file
-TestResults.xml
+*.swp
+*.swo
+*.swn
+
+# Logs & cache
+logs/
+*.log
+*.gz
+.npm/
+.yarn/
+.cache/
+tmp/
+out/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Testing coverage
+coverage/
+.jest/
+
+# Next.js specific
+.next/
+.vercel/
+out/
+
+# SvelteKit specific
+.svelte-kit/
+
+# Nuxt.js specific
+.nuxt/
+static/
+
+# Angular specific
+.angular/
+*.tsbuildinfo
+
+# Bun (alternative to Node.js)
+.bun/
+
+# Firebase & Google Cloud
+.firebase/
+.firebaserc
+gcloud-debug.log
+.gcloudignore
+
+# Deployment files
+/.serverless/
+.dockerignore
+docker-compose.override.yml

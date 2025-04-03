@@ -1,0 +1,65 @@
+h1 {
+    text-align: center;
+    font: italic small-caps bold 30px Georgia, serif;
+}
+
+div {
+    margin: 0 auto;
+    width: 900px;
+    height: 600px;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    font: 16px/24px Georgia, serif;
+    text-align: center;
+}
+
+button {
+    margin: auto;
+    padding: 5px;
+    font: 16px Georgia, serif;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+}
+
+#myButton {
+    background-color:rgb(111, 166, 255);
+    cursor: pointer;
+    position: absolute;
+    visibility: hidden;
+}
+
+#myButton:hover {
+    background-color: rgb(98, 147, 226);
+}
+
+#myButton:active {
+    background-color: rgb(41, 119, 243);
+    color: white;
+}
+
+#start {
+    background-color: rgb(94, 194, 100);
+}
+
+#start:hover {
+    background-color: rgb(63, 131, 68);
+}
+
+#start:active {
+    background-color: rgb(0, 132, 9);
+    color: white;
+}
+
+#result {
+    visibility: hidden;
+}

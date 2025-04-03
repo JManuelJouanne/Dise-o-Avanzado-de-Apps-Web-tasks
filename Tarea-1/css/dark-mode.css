@@ -1,0 +1,47 @@
+body.dark-mode {
+  background: #222;
+  color: #ddd;
+}
+
+body.dark-mode header {
+  background: #222;
+}
+
+body.dark-mode #toggle-dark-mode {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  gap: 10px;
+  background: #7f8988;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+body.dark-mode #toggle-dark-mode:hover {
+  background: #dcdcdc; 
+}
+
+#editor-container,
+#preview-container {
+  flex: 1;
+  overflow: hidden; 
+  padding: 16px;
+  background: #fafafa; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+}
+
+body.dark-mode #editor-container,
+body.dark-mode #preview-container {
+  background: #333;
+  border: 1px solid #666;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+body.dark-mode #markdown-editor {
+  background: #333;   
+  color: #fff;
+}

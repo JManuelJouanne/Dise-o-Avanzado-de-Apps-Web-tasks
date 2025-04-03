@@ -1,0 +1,19 @@
+{
+  "name": "c1",
+  "version": "1.0.0",
+  "description": "Reflejos",
+  "source": "src/index.html",
+  "type": "module",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.2"
+  }
+}

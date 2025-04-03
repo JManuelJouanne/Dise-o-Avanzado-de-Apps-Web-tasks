@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #b1b0b0;
+    color: #fff;
+    padding: 8px 16px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#toggle-dark-mode {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    gap: 10px;
+    background: #7f8988;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#toggle-dark-mode:hover {
+    background: #dcdcdc;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+#editor-container,
+#preview-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+#markdown-editor {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    background: #fafafa;
+    overflow-y: auto;
+}
+
+#markdown-preview {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 2px;
+}
+
+#toolbar {
+    display: flex;
+    gap: 10px;
+    background: #7f8988;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+#toolbar button {
+    padding: 8px 15px;
+    border: none;
+    background: #7f8988;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#toolbar button:hover {
+    background:rgb(200, 200, 200);
+}
+
+#export-button {
+    padding: 8px 15px;
+    border: none;
+    background: #7f8988;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#export-button:hover {
+    background: rgb(200, 200, 200);
+}
+
+#dark-mode-toggle {
+    font-size: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#dark-mode-div {
+    display: flex;
+    gap: 10px;
+    background: #7f8988;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+#markdown-preview h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+#markdown-preview h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+blockquote {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 2rem 0;
+    padding-left: 1rem;
+    border-left: 4px solid #ccc;
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+hr {
+border-top: 2px solid #ccc;
+}
+
+inlinecode {
+    background-color: #ccc; 
+    color: #333;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+  }
+
+  code {
+    background-color: #ccc;  
+    border: 1px solid #ddd;   
+    padding: 10px;
+    margin: 5px 0;            
+    border-radius: 4px;
+    display: block;
+    font-family: Consolas, 'Courier New', monospace;
+    color: #333;
+    white-space: pre;
+    line-height: 0.8;
+  }
+
+/* Obtenido de https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details */
+
+details {
+    margin: 7px 0;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
+}
