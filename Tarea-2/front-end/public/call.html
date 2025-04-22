@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Videollamada — Express</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col h-screen bg-gray-900 text-white font-sans relative">
+
+  <!-- Banner offline -->
+  <div id="offline-banner"
+       class="hidden fixed top-4 right-4 bg-red-600 text-white px-4 py-2 rounded shadow-lg z-50">
+    🚫 Estás desconectado — llamadas deshabilitadas
+  </div>
+
+  <!-- HEADER -->
+  <header class="bg-gray-800 px-6 py-3 relative flex items-center">
+    <!-- Botón Volver al inicio -->
+    <a href="/"
+       class="absolute left-6 text-sm bg-gray-700 hover:bg-gray-600 px-3 py-1 rounded z-50">
+      ← Volver al inicio
+    </a>
+
+    <!-- Título + ID centrados -->
+    <div class="flex-1 text-center">
+      <div class="text-xl font-semibold">Videollamada Express</div>
+      <div class="mt-1 inline-block bg-gray-700 px-3 py-1 rounded">
+        <span class="text-sm text-gray-300">Mi ID:</span>
+        <code id="my-id" class="text-sm font-mono text-white">–</code>
+      </div>
+    </div>
+
+    <!-- Input + Botón Llamar a la derecha -->
+    <div class="ml-auto flex items-center space-x-0">
+      <input id="remote-id"
+             type="text"
+             placeholder="ID del peer a llamar"
+             class="w-64 bg-gray-700 text-white placeholder-gray-400 px-3 py-2 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+      <button id="call-btn"
+              class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r text-white font-medium disabled:opacity-50">
+        Llamar
+      </button>
+    </div>
+  </header>
+
+  <!-- VIDEOS LADO A LADO -->
+  <main class="flex-1 p-4 flex flex-row gap-4 overflow-hidden">
+    <div class="w-1/2 bg-black rounded-lg shadow-lg overflow-hidden flex items-center justify-center flex-col relative">
+      <video id="my-video"
+             class="w-full h-full object-cover"
+             autoplay muted playsinline>
+            </video>
+      <div class="absolute bottom-0 w-full px-4 pb-4">
+        <div class="flex justify-end mr-6">
+          <p id="my-message" class="bg-gray-800 px-6 py-2 mb-4 ml-auto self-end w-auto inline-block rounded-full flex"></p>
+        </div>
+        <form id="form" class="mb-2 rounded-lg bg-gray-800 p-2 flex items-center space-x-2">
+          <input id="input" type="text" placeholder="Escribe un mensaje" class="w-5/6 bg-gray-700 text-white placeholder-gray-400 px-3 py-2 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+          <button id="send" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white font-medium disabled:opacity-50">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div class="w-1/2 bg-black rounded-lg shadow-lg overflow-hidden flex items-center justify-center flex-col relative">
+      <video id="peer-video"
+             class="w-full h-full object-cover"
+             autoplay playsinline></video>
+      <div class="flex justify-end mr-6 absolute bottom-0 w-full">
+        <p id="peer-message" class="bg-gray-800 px-6 py-2 mb-4 ml-auto self-end w-auto inline-block rounded-full flex"></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- CONTROLES EN EL PIE -->
+  <footer class="bg-gray-800 px-6 py-3 flex justify-center space-x-8">
+    <button id="mute-btn" class="flex flex-col items-center text-sm hover:text-gray-200">
+      <span class="text-2xl" id="mute-icon">🔊</span>
+      <span class="mt-1" id="mute-label">Desactivar Microfono</span>
+    </button>
+    <button id="hangup-btn" class="bg-red-600 hover:bg-red-700 p-3 rounded-full text-xl">
+      📞
+    </button>
+    <button id="video-btn" class="flex flex-col items-center text-sm hover:text-gray-200">
+      <span class="text-2xl" id="video-icon">🎥❌</span>
+      <span class="mt-1" id="video-label">Vídeo off</span>
+    </button>
+  </footer>
+
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+  <script type="module" src="/src/socket.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

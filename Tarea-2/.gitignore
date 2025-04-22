@@ -1,0 +1,24 @@
+# Node modules (para ambos)
+front-end/node_modules/
+back-end/node_modules/
+
+# Build de Vite
+front-end/dist/
+
+# Archivos de entorno
+front-end/.env
+back-end/.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operativo / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Producción (por si haces un build del backend)
+backend/build/

@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Que los vídeos rellenen su contenedor */
+video.object-cover {
+  object-fit: cover;
+}
